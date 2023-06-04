@@ -1,0 +1,15 @@
+services:
+  notebook:
+    #build: .
+    image: jupyter/datascience-notebook
+    ports:
+      - '8888:8888'
+    restart: always
+    volumes:
+      - ./work:/home/jovyan/work
+    user: root
+    environment:
+        GRANT_SUDO: "yes"
+
+  
+    
